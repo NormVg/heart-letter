@@ -47,7 +47,7 @@ const submitForm = async () => {
   <Header header="My Heart" />
   <div id="write-box">
     <div class="heart-input-container">
-      <label for="heart-input" class="heart-input-label">From :</label>
+      <label for="heart-input" class="heart-input-label">For :</label>
       <select v-model="from">
         <option value="" disabled selected>Select Person</option>
         <option value="vishnu">Vishnu</option>

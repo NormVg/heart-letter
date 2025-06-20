@@ -1,75 +1,26 @@
-# Nuxt Minimal Starter
+Meri zindagi ki sabse pyaari kahaani ho tum,
+Meri bubu, meri buliii, meri chhoti si payari sii jaan ho tum 💗
+Kabhi cartoon jaisi cute, toh kabhi full drama queen,
+Lekin meri duniya ki sabse best part ho tum!
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Jab hasti ho na toh duniya ruk jaati hai,
+Mujhe lagta hai meri battery wapas charge ho jaati hai
+Tumhara Ruthana bhi itna cute lagta hai yaar,
+Main toh har mood mein tum par hi luut jaata hoon
 
-## Setup
+Batcha si lagti ho, par dil se toh meri Lakshmi ho,
+Main sach bolu toh meri life ki full routine ho.
+Har subah tumhara naam leke uthna,
+Aur raat ko “goodnight bubuuuu” kehke sona
+woh hi meri life ka sukoon hai 💞
 
-Make sure to install dependencies:
+Main lucky hoon, blessed hoon, full top-tier kush hoon,
+Kyuki meri bubuliii meri life mein hai
+that’s the real AAAAAAAAAAAAAAAAA
+Pyaar karta hoon itna ki gin bhi nahi sakta,
+Tum ho to hum ha and tumse humara jeevan bandha ha
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Toh meri pyaari bubuu, meri duniya, meri  jaan,
+Mere dil mein hamesha aapka naam ha💌
+Main hoon, main rahunga, hamesha tera hi rahunga,
+Baki duniya to tum hi ho meri
