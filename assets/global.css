@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root{
+  --bg:#F1C0E8;
+  --red:#9C2F3B;
+  --mint:#D0F4DE;
+  --gradient-font: linear-gradient(to bottom, #000000, #F1C0E8);
+  --font: "K2D", sans-serif;
+  --font-head:"Great Vibes", cursive;
+  --shadow:0 0 40px 4px rgba(0, 0, 0, 0.7);
+}
+
+body{
+
+  font-family: var(--font);
+  color: #000000;
+  background-color: var(--bg);
+
+}
+
