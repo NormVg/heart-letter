@@ -29,15 +29,40 @@ const sendRedirect =  (params) => {
 
 </div>
 
-
-<img :src="ringFlow" class="ring-flow">
-
+  <img :src="ringFlow" class="ring-flow">
 
 <Footer/>
 </template>
 
 
 <style scoped>
+
+#menu > * {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.7s forwards;
+}
+
+#menu > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+#menu > *:nth-child(2) {
+  animation-delay: 0.4s;
+}
+#menu > *:nth-child(3) {
+  animation-delay: 0.7s;
+}
+#menu > *:nth-child(4) {
+  animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #menu{
   display: flex;
   flex-direction: column;

@@ -21,6 +21,9 @@ import RibbonLeft from "~/assets/img/marquee-left.png"
 
 
 <style scoped>
+
+
+
 .b-ribbon{
 /* border:  1px solid salmon; */
 /* height: 100vh; */
@@ -28,7 +31,7 @@ z-index: -10;
 width: max-content;
 display: flex;
 flex-direction: column;
-gap: 10px;
+/* gap: 3px; */
 overflow: visible;
 }
 
@@ -40,12 +43,50 @@ overflow: visible;
 position: fixed;
 top: 0;
 right: 0;
+
+
 }
 
 #b-l{
 position: fixed;
 top: 0;
 left: 0;
+
+}
+
+.b-ribbon img {
+  opacity: 0;
+  animation: fade-in 1.2s forwards;
+}
+
+#b-l img {
+  animation-name: fade-in-left;
+}
+
+#b-r img {
+  animation-name: fade-in-right;
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 

@@ -1,6 +1,6 @@
 
 <script setup>
-import mailImg from "~/assets/img/mail.png"
+import mailImg from "~/assets/img/mail2.png"
 import letterImg from "~/assets/img/letter.png"
 import MarkdownRender from "~/components/MarkdownRender.vue"
 const header0 = ref("Please Open Letter Love")
@@ -73,6 +73,22 @@ isLetterOpen.value = false
 
 <style scoped>
 
+#mail-box {
+  animation: mailbox-fade-in 1.2s cubic-bezier(.55,0,.1,1);
+  animation-delay: 100ms;
+
+}
+
+@keyframes mailbox-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 #mail-box {
   position: relative;

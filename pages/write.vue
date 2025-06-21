@@ -18,6 +18,8 @@ const submitForm = async () => {
     return
   }
 
+  txt.value = txt.value.replace(/\r\n|\r/g, "\n");
+
   console.log("txt:", txt.value);
   console.log("from:", from.value);
   console.log("yours:", yours.value);
@@ -50,8 +52,8 @@ const submitForm = async () => {
       <label for="heart-input" class="heart-input-label">For :</label>
       <select v-model="from">
         <option value="" disabled selected>Select Person</option>
-        <option value="vishnu">Vishnu</option>
-        <option value="sakshi">Sakshi</option>
+        <option value="Vishnu">Vishnu</option>
+        <option value="Sakshi">Sakshi</option>
       </select>
     </div>
 
@@ -74,17 +76,70 @@ const submitForm = async () => {
 
     <label for="heart-input" class="heart-input-label">Letter :</label>
 
-    <Codemirror
-      :extensions="[ctpMocha]"
+    <textarea
       v-model="txt"
-      :style="{ height: '100vh', marginLeft: '1px' }"
-    />
+      rows="10"
+      class="heart-input"
+      placeholder="Write your letter here..."
+      style="width: 100%; resize: vertical; margin-bottom: 16px;"
+    ></textarea>
+
+
   </div>
   <Footer/>
 </template>
 
 <style scoped>
 
+#save-box {
+  opacity: 0;
+  animation: fadeInSaveBox 0.8s ease 0.8s forwards;
+}
+
+@keyframes fadeInSaveBox {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#write-box {
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+textarea.heart-input {
+  min-height: 180px;
+  font-size: 18px;
+  font-family: var(--font);
+  line-height: 1.6;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1.5px solid #bbb;
+  /* background: var(--mint); */
+  background-image: url("~/assets/img/letter2.jpg");
+
+  box-shadow: var(--shadow);
+  transition: border-color 0.2s;
+}
+
+textarea.heart-input:focus {
+  outline: none;
+  border-color: var(--red);
+
+}
 
 #save-box{
 
@@ -133,7 +188,7 @@ select,
 .select-label {
   display: block;
   margin-bottom: 6px;
-  font-size: 25px;
+  font-size: 30px;
   /* font-weight: bold; */
   font-family: var(--font-head);
 }
