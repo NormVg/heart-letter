@@ -47,5 +47,7 @@ const html = computed(() => renderMarkdown(props.md))
   font-family: var(--font-head);
   color:var(--red)
 }
-
+.markdown-content p{
+  white-space: pre-line;
+}
 </style>

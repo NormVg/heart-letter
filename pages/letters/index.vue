@@ -11,7 +11,7 @@ const data  = ListData.value.data.reverse();
 
 letters.value = data
 
-console.log("dell",ListData.value);
+// console.log("dell",ListData.value);
 
 
 </script>

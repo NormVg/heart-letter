@@ -18,7 +18,7 @@ const { data:MailData } = await useFetch('/api/read?uid='+route.query.uid);
 
 mailDataRef.value = MailData.value.data[0] ;
 
-console.log("dell",mailDataRef.value);
+// console.log("dell",mailDataRef.value);
 
 letter.value = `
 \n
@@ -29,12 +29,12 @@ ${mailDataRef.value.letter}
 `
 
 const openMail = () => {
-  console.log("mail open");
+  // console.log("mail open");
 isLetterOpen.value = true
 }
 
 const closeMail = () => {
-  console.log("mail close");
+  // console.log("mail close");
 isLetterOpen.value = false
 }
 

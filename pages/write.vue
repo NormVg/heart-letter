@@ -20,9 +20,9 @@ const submitForm = async () => {
 
   txt.value = txt.value.replace(/\r\n|\r/g, "\n");
 
-  console.log("txt:", txt.value);
-  console.log("from:", from.value);
-  console.log("yours:", yours.value);
+  // console.log("txt:", txt.value);
+  // console.log("from:", from.value);
+  // console.log("yours:", yours.value);
 
   const body = {
     from: from.value,
