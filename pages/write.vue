@@ -41,6 +41,28 @@ const submitForm = async () => {
   txt.value = "";
 }
 
+const selectedEmoji = ref()
+const showEmojiPicker =ref(false)
+
+
+const onSelectEmoji = (emoji) => {
+  selectedEmoji.value = emoji.i
+  // txt.value += emoji.i;
+
+  const textarea = document.querySelector("textarea.heart-input");
+  if (textarea) {
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const before = txt.value.slice(0, start);
+    const after = txt.value.slice(end);
+    txt.value = before + emoji.i + after;
+    nextTick(() => {
+      textarea.focus();
+      textarea.selectionStart = textarea.selectionEnd = start + emoji.i.length;
+    });
+  }
+}
+
 </script>
 
 <template>
@@ -76,6 +98,19 @@ const submitForm = async () => {
 
     <label for="heart-input" class="heart-input-label">Letter :</label>
 
+    <button
+      @click="showEmojiPicker = !showEmojiPicker"
+      style="margin-bottom: 12px;"
+    >
+    {{ showEmojiPicker?'Close Emoji':'Open Emoji' }}
+
+    </button>
+    <NuxtEmojiPicker
+      v-if="showEmojiPicker"
+      :hide-search="false"
+      theme="light"
+      @select="onSelectEmoji"
+    />
     <textarea
       v-model="txt"
       rows="10"
@@ -85,11 +120,34 @@ const submitForm = async () => {
     ></textarea>
 
 
+
+
   </div>
   <Footer/>
 </template>
 
 <style scoped>
+
+button{
+  background-color: var(--mint);
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  margin: 10px;
+  user-select: none;
+  transition: all ease-in-out 300ms;
+
+}
+
+
+
+button:active{
+  scale: 0.95;
+}
 
 #save-box {
   opacity: 0;
@@ -130,7 +188,7 @@ textarea.heart-input {
   border: 1.5px solid #bbb;
   /* background: var(--mint); */
   background-image: url("~/assets/img/letter2.jpg");
-
+  margin-top: 10px;
   box-shadow: var(--shadow);
   transition: border-color 0.2s;
 }
