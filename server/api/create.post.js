@@ -5,18 +5,9 @@ export default defineEventHandler(async (event) => {
   try {
     const data = await readBody(event);
 
-    const { from, yours, letter, date } = data;
+    const { from, yours, letter, current_data } = data;
 
-    // Format date to dd-mm-yyyy
-    const formatDate = () => {
-      const d = new Date();
-      const day = String(d.getDate()).padStart(2, '0');
-      const month = String(d.getMonth() + 1).padStart(2, '0');
-      const year = d.getFullYear();
-      return `${day}-${month}-${year}`;
-    };
 
-    const current_data = formatDate()
 
     const value = {
       id: `uid_${crypto.randomUUID()}_${current_data}`,

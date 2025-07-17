@@ -12,6 +12,18 @@ const yours = ref("")
 
 const isProcessing = ref(false)
 
+
+// Format date to dd-mm-yyyy
+const formatDate = () => {
+  const d = new Date();
+  const day = String(d.getDate()).padStart(2, '0');
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const year = d.getFullYear();
+  return `${day}-${month}-${year}`;
+};
+
+const current_data = formatDate()
+
 const submitForm = async () => {
 
   if (isProcessing.value) {
@@ -27,7 +39,8 @@ const submitForm = async () => {
   const body = {
     from: from.value,
     yours: yours.value,
-    letter: txt.value
+    letter: txt.value,
+    current_data:current_data
   };
 
   await $fetch("/api/create", {

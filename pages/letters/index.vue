@@ -7,7 +7,7 @@ const letters = ref([]);
 
 const { data:ListData } = await useFetch('/api/list');
 
-const data  = ListData.value.data.reverse();
+const data  = ListData.value.data
 
 letters.value = data
 
@@ -22,7 +22,7 @@ letters.value = data
 
 <div id="letter-box">
 
-  <MailCard v-for="item in letters" :key="item.id"  :uid="item.id" :header="`Letter For ${item.from} By ${item.yours}.`"/>
+  <MailCard v-for="item in letters" :key="item.id"  :uid="item.id" :date="item.date" :header="`Letter For ${item.from} By ${item.yours}.`"/>
 
 
 
@@ -56,7 +56,7 @@ letters.value = data
   margin: 0px 80px;
   margin-top: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   gap: 10px;
