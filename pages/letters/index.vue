@@ -16,9 +16,9 @@ if (url.origin === 'https://heart-letter-sigma.vercel.app') {
   letters.value = data
 }else{
 
+  const data  = ListData.value.data
+  letters.value = data
 }
-const data  = ListData.value.data
-letters.value = data
 
 
 
