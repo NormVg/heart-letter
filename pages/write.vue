@@ -11,6 +11,7 @@ const from = ref("")
 const yours = ref("")
 
 const isProcessing = ref(false)
+const url = useRequestURL()
 
 
 // Format date to dd-mm-yyyy
@@ -25,6 +26,14 @@ const formatDate = () => {
 const current_data = formatDate()
 
 const submitForm = async () => {
+
+
+
+
+  if (url.origin === 'https://heart-letter-sigma.vercel.app') {
+
+    return
+  }
 
   if (isProcessing.value) {
     return
@@ -77,7 +86,6 @@ const onSelectEmoji = (emoji) => {
 }
 
 
-const url = useRequestURL()
 console.log(url.origin);
 
 
