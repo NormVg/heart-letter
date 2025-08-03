@@ -7,12 +7,25 @@ const letters = ref([]);
 
 const { data:ListData } = await useFetch('/api/list');
 
-const data  = ListData.value.data
+const url = useRequestURL()
+console.log(url.origin);
 
+if (url.origin === 'https://heart-letter-sigma.vercel.app') {
+
+  const data = ListData.value.data.slice(0, 8);
+  letters.value = data
+}else{
+
+}
+const data  = ListData.value.data
 letters.value = data
+
+
 
 // console.log("dell",ListData.value);
 
+// const url = useRequestURL()
+// console.log(url.origin);
 
 </script>
 

@@ -76,6 +76,13 @@ const onSelectEmoji = (emoji) => {
   }
 }
 
+
+const url = useRequestURL()
+console.log(url.origin);
+
+
+const isOld = url.origin === 'https://heart-letter-sigma.vercel.app'
+
 </script>
 
 <template>
@@ -118,7 +125,29 @@ const onSelectEmoji = (emoji) => {
     {{ showEmojiPicker?'Close Emoji':'Open Emoji' }}
 
     </button>
-    <div id="asd">
+    <div v-if="isOld">
+
+      <NuxtEmojiPicker
+      v-if="showEmojiPicker"
+      :hide-search="false"
+      theme="light"
+      @select="onSelectEmoji"
+      />
+
+    </div>
+<textarea
+v-if="isOld"
+      v-model="txt"
+      rows="10"
+      class="heart-input"
+      placeholder="Write your letter here..."
+      style="width: 100%; resize: vertical; margin-bottom: 16px;"
+      ></textarea>
+
+
+
+
+    <div id="asd" v-if="!isOld">
 
 
     <textarea
@@ -292,41 +321,3 @@ select,
   }
 }
 </style>
-Kal ka din shayad sabse pyara hona chahiye tha,
-Par maine us din ko bhi udaasi se bhar diya.
-Woh din jisme main tujhe feel karwaana chahta tha
-ki tu meri zindagi ka sabse khoobsurat hissa hai…
-us din main tujhse lad baitha.
-
-Dil se bura lag raha hai…
-Kyuki yeh “missed moment” nahi,
-mera hi pyaar fail ho gaya tujhe mehsoos karwaane mein.
-
-Main nahi chahta tha ki aaj aansu ho,
-main chahta tha smiles ho, cute talks ho,
-aur woh sab jo sirf hum dono ke beech hota hai.
-
-Lekin haan, galti ho gayi. Aur main maanta hoon.
-Main sorry hoon. Pura dil se.
-Par pyaar kam nahi hua… balki aur gehra ho gaya hai.
-Tujhe khona soch bhi nahi sakta.
-
-Jo bhi misunderstand hua…
-Main usse theek karunga. Har haal mein.
-Because, I love you. More than anything. More than any fight. More than any stupid day I messed up.
-
-Tu hai toh sab kuch hai.
-Aur main har din tujhse dobara jeetne ko ready hoon pyar se, respect se.
-
-💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌
-sorry for yesterday my loveeee
-maaf ker do babe pleaseeee
-gusse me bahut kuch bol geya me babe
-happy Girlfriends day and friendship day
-
-❤️❤️❤️❤️❤️❤️❤️❤️
-
-<audio controls>
-  <source src="https://heart-letter-sigma.vercel.app/bulleya.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
